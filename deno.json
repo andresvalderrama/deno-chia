@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "strict": false
+  },
+  "imports": {
+    "std/": "https://deno.land/std@0.180.0/"
+  },
+  "tasks": {
+    "dev": "deno run --watch index.ts",
+    "chai": "deno run --allow-all src/cli.ts"
+  },
+  "fmt": {
+    "files": {
+      "include": [
+        "./"
+      ]
+    },
+    "options": {
+      "useTabs": false,
+      "lineWidth": 80,
+      "indentWidth": 2,
+      "singleQuote": false,
+      "proseWrap": "preserve"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"activityBar.activeBackground": "#1f6fd0",
+			"activityBar.background": "#1f6fd0",
+			"activityBar.foreground": "#e7e7e7",
+			"activityBar.inactiveForeground": "#e7e7e799",
+			"activityBarBadge.background": "#ee90bb",
+			"activityBarBadge.foreground": "#15202b",
+			"commandCenter.border": "#e7e7e799",
+			"sash.hoverBorder": "#1f6fd0",
+			"statusBar.background": "#1857a4",
+			"statusBar.foreground": "#e7e7e7",
+			"statusBarItem.hoverBackground": "#1f6fd0",
+			"statusBarItem.remoteBackground": "#1857a4",
+			"statusBarItem.remoteForeground": "#e7e7e7",
+			"titleBar.activeBackground": "#1857a4",
+			"titleBar.activeForeground": "#e7e7e7",
+			"titleBar.inactiveBackground": "#1857a499",
+			"titleBar.inactiveForeground": "#e7e7e799"
+		},
+		"peacock.color": "#1857a4",
+		"deno.enable": true,
+		"deno.unstable": true,
+		"editor.defaultFormatter": "denoland.vscode-deno"
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"request": "launch",
+				"name": "Launch Program",
+				"type": "node",
+				"program": "${workspaceFolder}/index.ts",
+				"cwd": "${workspaceFolder}",
+				"runtimeExecutable": "/home/andresvalderrama/.deno/bin/deno",
+				"runtimeArgs": [
+					"run",
+					"--unstable",
+					"--inspect-brk",
+					"--allow-all"
+				],
+				"attachSimplePort": 9229
+			},
+			{
+				"request": "launch",
+				"name": "Launch CLI",
+				"type": "node",
+				"cwd": "${workspaceFolder}",
+				"runtimeExecutable": "/home/andresvalderrama/.deno/bin/deno",
+				"runtimeArgs": [
+					"task",
+					"teku:debug"
+				],
+				"args": [],
+				"attachSimplePort": 9229
+			},
+			{
+				"request": "launch",
+				"name": "Launch Spec",
+				"type": "node",
+				"program": "${workspaceFolder}/src/parser/test/index.js",
+				"cwd": "${workspaceFolder}",
+				"runtimeExecutable": "/home/andresvalderrama/.deno/bin/deno",
+				"runtimeArgs": [
+					"run",
+					"--unstable",
+					"--inspect-brk",
+					"--allow-all"
+				],
+				"attachSimplePort": 9229
+			},
+		]
+	}
+}
