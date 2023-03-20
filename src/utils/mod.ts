@@ -1,5 +1,5 @@
-import {} from "../assertion.ts";
-
+import addLengthGuard from "./addLengthGuard.ts";
+import addMethod from "./addMethod.ts";
 import addProperty from "./addProperty.ts";
 import flag from "./flag.ts";
 import getActual from "./getActual.ts";
@@ -10,6 +10,8 @@ import proxify from "./proxify.ts";
 import test from "./test.ts";
 
 export default {
+  addLengthGuard,
+  addMethod,
   addProperty,
   flag,
   getActual,
